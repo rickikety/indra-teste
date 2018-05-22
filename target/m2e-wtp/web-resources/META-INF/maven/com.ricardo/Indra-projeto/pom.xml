@@ -6,7 +6,6 @@
 	<groupId>com.ricardo</groupId>
 	<artifactId>Indra-projeto</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 
 	<name>Indra-projeto</name>
 	<description>segundo processo indra tecnologia</description>
@@ -86,4 +85,5 @@
 	</build>
 
 
+	<packaging>war</packaging>
 </project>
