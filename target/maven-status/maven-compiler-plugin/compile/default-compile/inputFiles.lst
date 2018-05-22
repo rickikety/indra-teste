@@ -1,0 +1,8 @@
+/home/ricardo/Documents/workspace-sts-3.9.3.RELEASE/Indra-projeto/src/main/java/com/ricardo/indraprojeto/IndraProjetoApplication.java
+/home/ricardo/Documents/workspace-sts-3.9.3.RELEASE/Indra-projeto/src/main/java/com/ricardo/indraprojeto/security/WebSecurityConfig.java
+/home/ricardo/Documents/workspace-sts-3.9.3.RELEASE/Indra-projeto/src/main/java/com/ricardo/indraprojeto/controller/ProdutoController.java
+/home/ricardo/Documents/workspace-sts-3.9.3.RELEASE/Indra-projeto/src/main/java/com/ricardo/indraprojeto/model/Fornecedor.java
+/home/ricardo/Documents/workspace-sts-3.9.3.RELEASE/Indra-projeto/src/main/java/com/ricardo/indraprojeto/model/Produto.java
+/home/ricardo/Documents/workspace-sts-3.9.3.RELEASE/Indra-projeto/src/main/java/com/ricardo/indraprojeto/controller/IndexController.java
+/home/ricardo/Documents/workspace-sts-3.9.3.RELEASE/Indra-projeto/src/main/java/com/ricardo/indraprojeto/repository/ProdutoRepository.java
+/home/ricardo/Documents/workspace-sts-3.9.3.RELEASE/Indra-projeto/src/main/java/com/ricardo/indraprojeto/repository/FornecedorRepository.java

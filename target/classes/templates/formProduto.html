@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-br"
+	xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+
+    
+      
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/node_modules/bootstrap/compiler/bootstrap.css}"/>
+      
+    <link rel="stylesheet" th:href="@{/style/css/style.css}"/>
+      
+    <link rel="stylesheet" th:href="@{/node_modules/font-awesome/css/font-awesome.css}"/>
+
+       <title>Cadastro</title>
+      
+  </head>
+  <body>
+
+    <!-- código inicia aqui -->
+    
+   <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary">
+    	<div class="container">
+    		<a class="navbar-brand h1 mb-0" href="#">RICARDO</a>
+    	
+    		<div class="ml-0 form-inline">
+    			<h3><a th:href="@{/produtos}" class="btn btn-dark mr-3">Listar produtos</a></h3>
+ 				<h3><a th:href="${(#mvc.url('PC#sair')).build()}" class="btn btn-dark">Sair</a></h3>
+    		</div>
+    	</div>
+    </nav>
+    
+    <div class="container margemSup">
+    
+    	<h2>Cadastro de produto</h2><br/>
+    	
+    	<div class="alert alert-success" role="alert" th:if="${not #strings.isEmpty(mensagem)}">
+			<span th:text="${mensagem}"></span>
+		</div>
+    	<div class="alert alert-danger " role="alert" th:if="${not #strings.isEmpty(mensagemErro)}">
+			<span th:text="${mensagemErro}"></span>
+		</div>
+		
+		<form method="post">
+			<div class="form-row">
+				<div class="form-group col-sm-3">
+					Nome*: <input type="text" value="" name="nome"></input>
+				</div>
+			</div>
+			<div class="form-row">
+				<div class="form-group col-sm-3">
+					Preco*: <input type="text" values="" name="preco"></input>
+				</div>
+			</div>
+			
+			<div class="form-row ml-1">
+				<button class="btn btn-primary" type="submit">Salvar</button>
+			</div>
+
+			
+		</form>
+    
+    </div>
+  		
+      
+    <!-- código termina aqui -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script th:src="@{/node_modules/jquery/dist/jquery.js}"></script>
+    <script th:src="@{/node_modules/popper.js/dist/umd/popper.js}"></script>
+    <script th:src="@{/node_modules/bootstrap/dist/js/bootstrap.js}"></script>
+      
+    <script>
+        
+        $(function () {
+        
+            $('[data-toggle="popover"]').popover()
+        
+        })
+      
+    </script>
+
+  </body>
+</html>

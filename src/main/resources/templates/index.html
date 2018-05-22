@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="pt-br"
+	xmlns:th="http://thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+  <head>
+
+    
+      
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{/node_modules/bootstrap/compiler/bootstrap.css}"/>
+      
+    <link rel="stylesheet" th:href="@{/style/css/style.css}"/>
+      
+    <link rel="stylesheet" th:href="@{/node_modules/font-awesome/css/font-awesome.css}"/>
+
+
+       <title>Produtos</title>
+      
+  </head>
+  <body>
+
+    <!-- código inicia aqui -->
+    
+   <nav class="navbar navbar-expand-lg navbar-dark bg-gradient-primary">
+    	<div class="container">
+    		<a class="navbar-brand h1 mb-0" href="#">RICARDO</a>
+    	
+    		<div class="ml-0 form-inline">
+    			<h3><a th:href="@{/cadastrarProduto}" class="btn btn-dark mr-3">Cadastrar Novo Produto</a></h3>
+    		    <h3><a th:href="${(#mvc.url('PC#sair')).build()}" class="btn btn-dark">Sair</a></h3>
+    		</div>
+    	</div>
+    </nav>
+    
+    <div class="container margemSup">
+    	
+    	<h2>Meus Produtos:</h2>
+    	
+    	<table cellpadding="40" class="borda tabela">
+    		<thead>
+    			<th>Nome </th>
+    			<th>Preço </th>
+    			<th>Atividades</th>
+    		</thead>
+    		
+    		<tbody>
+    			<tr th:each="produto :${produtos}">
+    				<td><a th:href="${(#mvc.url('PC#detalhesProduto').arg(0, produto.codigo)).build()}" ><span th:text="${produto.nome}"></span></a></td>
+    				<td><span th:text="${produto.preco}"></span></td>
+    				<td><a class="btn btn-danger" th:href="${(#mvc.url('PC#deletarProduto').arg(0, produto.codigo)).build()}">Deletar</a>
+    					<a class="btn btn-primary" th:href="${(#mvc.url('PC#atualizarProduto').arg(0, produto.codigo)).build()}">Editar</a></td>
+    			</tr>
+    		</tbody>
+    	</table>
+    
+    </div> <!-- fim .container -->
+  		
+      
+    <!-- código termina aqui -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script th:src="@{/node_modules/jquery/dist/jquery.js}"></script>
+    <script th:src="@{/node_modules/popper.js/dist/umd/popper.js}"></script>
+    <script th:src="@{/node_modules/bootstrap/dist/js/bootstrap.js}"></script>
+      
+    <script>
+        
+        $(function () {
+        
+            $('[data-toggle="popover"]').popover()
+        
+        })
+      
+    </script>
+
+  </body>
+</html>
